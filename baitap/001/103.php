@@ -1,7 +1,6 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     $sothunhat = $_REQUEST['sothunhat'];
     $sothuhai = $_REQUEST['sothuhai'];
     $pheptinh = $_REQUEST['pheptinh'];
