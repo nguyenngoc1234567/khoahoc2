@@ -1,34 +1,12 @@
-<?php
-// // xu ly nguoi dung gui du lieu  len 
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     // echo '<pre>';
-//     // print_r($_POST);
-//     // echo '</pre>';
-//     // khai bao bien 
-//     $sotien = $_POST['sotien'];
-//     $donvi = $_POST['donvi'];
-
-//     if ($donvi == 'usd') {
-//         $ketqua = $sotien / 23000;
-//     } else {
-//         $ketqua = $sotien * 23000;
-//     }
-//     // xuat 
-//     echo $ketqua;
-// }
-
+<?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sotien = $_POST['sotien'];
     $donvi = $_POST['donvi'];
     if ($donvi == 'usd'){
-        echo $ketqua = $sotien * 23000;
+        echo $ketqua = $sotien *0,3;
 
-    }else if ($donvi == 'vnd'){
-        echo  $ketqua = $sotien / 23000;
     }
-
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="text" name="sotien"><br>
         <select name="donvi">
             <option value="vnd">Chuyen tu vn sang usd</option>
-            <option value="usd">Chuyen tu usd sang vn</option>
+            
         </select>
         <input type="submit" value="chuyen doi">
     </form>
