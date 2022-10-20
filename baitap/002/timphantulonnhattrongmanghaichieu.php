@@ -20,4 +20,4 @@ for ($i = 0; $i < count($array); $i++)
     }
 }
  
-echo " giatrilonnhat $max";
+echo "gia tri lon nhat $max";

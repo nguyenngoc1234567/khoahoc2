@@ -20,13 +20,11 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sotien = $_POST['sotien'];
     $donvi = $_POST['donvi'];
-    if ($donvi == 'usd'){
+    if ($donvi == 'usd') {
         echo $ketqua = $sotien * 23000;
-
-    }else if ($donvi == 'vnd'){
+    } else if ($donvi == 'vnd') {
         echo  $ketqua = $sotien / 23000;
     }
-
 }
 
 ?>

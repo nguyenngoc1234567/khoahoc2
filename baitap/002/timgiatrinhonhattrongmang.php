@@ -19,5 +19,4 @@ for ($i = 0; $i < count($array); $i++)
         }
     }
 }
- 
 echo " gia tri nho nhat $min";
