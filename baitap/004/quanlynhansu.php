@@ -44,10 +44,13 @@ class NhanVien
     }
     public function getViTriCongViec()
     {
-        return $this->ViTriCongViec;
+        // return $this->ViTriCongViec;
+         
     }
 }
 $objNhanVien = new NhanVien(1, 2, 2, 3, 4);
 echo '<pre>';
 print_r($objNhanVien);
 echo '</pre>';
+
+
