@@ -10,6 +10,7 @@ $info = [
     'ten' => 'ngoc',
     'ngay_sinh'=> '1/22/3',
     'diachi'=>' a d'
+    
 ];
 echo '<pre>'; 
 print_r($book);

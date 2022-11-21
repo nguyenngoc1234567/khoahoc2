@@ -1,23 +1,13 @@
 <?php
-// if ( $_SERVER['REQUEST_METHOD']== 'POST') {
-//     $nhap = $_REQUEST['nhap'];
-//     $pattern = '/^[_a-z0-9]{6,}$/';
-// if (preg_match($pattern, $nhap)) {
-// echo 'Hợp lệ';
-// } else {
-// echo 'Không hợp lệ';
-// }   
-// }
- if($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $nhap = $_POST['nhap'];
-  if (preg_match($pattern,$nhap)) {
-echo 'Hơp lệ';
-
-  }else{
-    echo ' không hợp lệ ';
-  }
-
- }
+if ( $_SERVER['REQUEST_METHOD']== 'POST') {
+    $nhap = $_REQUEST['nhap'];
+    $pattern = '/^[_a-z0-9]{6,}$/';
+if (preg_match($pattern, $nhap)) {
+echo 'Hợp lệ';
+} else {
+echo 'Không hợp lệ';
+}   
+}
 
 ?>
 <!DOCTYPE html>

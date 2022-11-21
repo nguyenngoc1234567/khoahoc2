@@ -5,13 +5,13 @@ class <class_name> {
     // thuoc tinh
 public $thuoc_tinh_1 ='';
 public $thuoc_tinh_2 ='';
-
+        $sdjljì= new $lpop();
     // phuong thuc 
 
-    public functio phuong_thuc_1(){
+    public function phuong_thuc_1(){
         
     }
-    public functio phuong_thuc_2(){
+    public function phuong_thuc_2(){
         
     }
 };

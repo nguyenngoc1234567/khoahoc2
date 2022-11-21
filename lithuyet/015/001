@@ -1,0 +1,47 @@
+câu 1
+SELECT * FROM c10_nha_cung_cap;
+câu 2
+ SELECT MAHANG, TENHANG, SOLUONG FROM mat_hangs
+câu 3
+ SELECT HO, TEN, NGAYLAMVIEC FROM nhan_viens
+ câu 4
+ SELECT DIACHI, DIENTHOAI FROM nha_cung_caps WHERE TENGIAODICH = 'VINAMILK'
+câu 5
+ SELECT MAHANG, TENHANG FROM mat_hangs WHERE GIAHANG > 100000 AND SOLUONG < 50
+câu 6
+ SELECT * FROM mat_hangs JOIN nha_cung_caps ON mat_hangs.MACONGTY = nha_cung_caps .MACONGTY
+câu 7
+ SELECT * FROM mat_hangs
+    JOIN nha_cung_caps
+    ON mat_hangs.MACONGTY = nha_cung_caps .MACONGTY
+    WHERE TENCONGTY = 'Việt Tiến'
+câu 8
+SELECT TENCONGTY, DIACHI FROM nha_cung_caps
+    JOIN mat_hangs ON nha_cung_caps.MACONGTY = mat_hangs.MACONGTY
+    JOIN loaihangs ON mat_hangs.MALOAIHANG = loaihangs.MALOAIHANG
+    WHERE TENLOAIHANG = 'thực phẩm'
+câu 9
+ SELECT khach_hangs.TENGIAODICH FROM khach_hangs
+    JOIN don_dat_hangs ON khach_hangs.MAKHACHHANG = don_dat_hangs.MAKHACHHANG
+    JOIN chi_tiet_dat_hangs ON don_dat_hangs.SOHOADON = chi_tiet_dat_hangs.SOHOADON
+    JOIN mat_hangs ON chi_tiet_dat_hangs.MAHANG = mat_hangs.MAHANG
+    WHERE TENHANG ='thực phẩm loại 185'
+câu 10
+ SELECT TENGIAODICH, NGAYGIAOHANG, NOIGIAOHANG, HO, TEN FROM don_dat_hangs
+     JOIN khach_hangs ON don_dat_hangs.MAKHACHHANG = khach_hangs.MAKHACHHANG
+     JOIN nhan_viens ON don_dat_hangs.MANHANVIEN = nhan_viens.MANHANVIEN
+     WHERE SOHOADON = 2
+câu 11
+ SELECT (LUONGCOBAN + PHUCAP) AS LUONG FROM nhan_viens
+câu 12 (chưa ra)
+ SELECT TENHANG, (SOLUONG * GIABAN - SOLUONG * GIABAN * MUCGIAMGIA / 100 ) AS PHAITRA
+      FROM don_dat_hangs
+      JOIN chi_tiet_dat_hangs ON don_dat_hangs.SOHOADON = chi_tiet_dat_hangs.SOHOADON
+      JOIN mat_hangs ON chi_tiet_dat_hangs.MAHANG = mat_hangs.MAHANG
+      WHERE SOHOADON = 3 ;
+câu 13 (chưa ra)
+SELECT * FROM khach_hangs WHERE khach_hangs.TENGIAODICH = nha_cung_caps.TENGIAODICH
+câu 14(chưa ra)
+ SELECT * FROM nhan_viens v1
+     JOIN nhan_viens v2 ON v2.NGAYSINH = v1.NGAYSINH
+     WHERE v2.MANHANVIEN != v1.MANHANVIEN

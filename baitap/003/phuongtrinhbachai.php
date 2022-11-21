@@ -3,7 +3,7 @@ include_once 'QuadraticEquation.php';
 if ( $_SERVER['REQUEST_METHOD']== 'POST') {
     $a = $_REQUEST['nhapsothunhat'];
     $b = $_REQUEST['nhapsothuhai'];
-    $c = $_REQUEST['nhapsothuhai'];
+    $c = $_REQUEST['nhapsothuba'];
 
     // khởi tạo đói tượng
     $objQuadraticEquation = new QuadraticEquation($a,$b,$c);
@@ -25,7 +25,7 @@ if ( $_SERVER['REQUEST_METHOD']== 'POST') {
   <label for="">Nhập số thứ hai :</label><br>
   <input type="text"  name="nhapsothuhai" ><br>
   <label for="">Nhập số thứ ba :</label><br>
-  <input type="text"  name="nhapsothuhai" ><br>
+  <input type="text"  name="nhapsothuba" ><br>
   <input type="submit" value="Submit">
 </form>
 </body>
