@@ -2,28 +2,35 @@
 <?php
 include_once 'db.php';//$conn
 
+    global $conn;
+    $sql = "SELECT patient.*, prevention.Name_prevention as Name_prevention FROM patient join prevention on patient.class= prevention.ID";
+    $stmt = $conn->query($sql);
+    $stmt->setFetchMode(PDO::FETCH_OBJ);
+    $rows = $stmt->fetchAll();
+    
+
 $page = 'list';
 if( isset( $_GET['page'] ) && $_GET['page'] != '' ){
     $page = $_GET['page'];
 }
 
 // Gọi Controller
-include_once 'controllers/MatHangController.php';
-include_once 'controllers/LoaiHoangController.php';
+include_once 'controllers/patientController.php';
+include_once 'controllers/preventionController.php';
 
 
-$objController =  new MatHangController();
+$objController =  new patientController();
 switch ($page) {
-    case 'mat_hang/list':
+    case 'Patient/list':
         $objController->list();
         break;
-    case 'mat_hang/add':
+    case 'Patient/add':
         $objController->add();
         break;
-    case 'mat_hang/edit':
+    case 'Patient/edit':
         $objController->edit();
         break;
-    case 'mat_hang/delete':
+    case 'Patient/delete':
         $objController->delete();
         break;
     default:
@@ -31,18 +38,18 @@ switch ($page) {
         break;
 }
 
-$objController =  new LoaiHangController();
+$objController =  new preventionController();
 switch ($page) {
-    case 'list':
+    case 'prevention/list':
         $objController->list();
         break;
-    case 'add':
+    case 'prevention/add':
         $objController->add();
         break;
-    case 'edit':
+    case 'prevention/edit':
         $objController->edit();
         break;
-    case 'delete':
+    case 'prevention/delete':
         $objController->delete();
         break;
     default:

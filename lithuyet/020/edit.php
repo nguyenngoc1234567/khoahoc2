@@ -57,4 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <input type="file" name="IMAGE" class="form-control">
     <p> <img src="<?php echo 'http://localhost/modunl2/lithuyet/020/public/uploads/luyentap/' ?><?php echo $row->IMAGE ?>" height="100" width="100"></p>
     <input type="submit" value="Cap nhat">
-</form>
+</form> 
+
+luyentap  uploads  public

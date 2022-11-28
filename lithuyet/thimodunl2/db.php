@@ -9,4 +9,3 @@ $conn = new PDO('mysql:host=localhost;dbname='.$database, $username, $password);
     echo '<h1><khong the ket noi></h1>';
  }
 
-
